@@ -246,6 +246,8 @@ button.toggle-prompt .arr{display:inline-block;transform:rotate(0deg);transition
   transition:opacity .18s ease,visibility .18s ease;
 }
 #gate.gate.is-unlocked{opacity:0!important;visibility:hidden!important;pointer-events:none!important;}
+body:has(#gate.gate:not(.is-unlocked)){overflow:hidden!important;touch-action:none!important;}
+
 #gate.gate .gate-box{width:min(420px,92vw)!important;max-width:420px!important;text-align:center!important;color:#fff!important}
 #gate.gate .gate-logo{width:330px!important;max-width:80%!important;height:auto!important;margin:0 auto 30px!important;display:block!important;filter:drop-shadow(0 4px 24px rgba(201,168,76,.25))!important}
 #gate.gate .gate-title{font-size:26px!important;font-weight:800!important;line-height:1.2!important;color:#fff!important;margin:0 0 6px!important}
@@ -574,7 +576,8 @@ button.toggle-prompt .arr{display:inline-block;transform:rotate(0deg);transition
 }
 @media (max-width: 900px) {
   .sidenav { display: none; }
-  .page-layout { display: block; margin-left: 0 !important; padding-left: 0 !important; }
+  .page-layout { display: block; }
+  .main-content { margin-left: 0 !important; padding-left: 14px !important; }
   .cover { padding-left: 0 !important; }
 }
 </style></head>
